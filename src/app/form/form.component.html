@@ -30,29 +30,11 @@
         <div *ngIf="!fg.controls['name'].valid && fg.controls['name'].touched" class="invalid-feedback d-block">{{
           requiredError }}</div>
       </div>
-      <div class="form-group col-sd-12 col-md-6 col-lg-3 col-xl-3 mb-4">
-        <label for="employee_id">Employee ID</label>
-        <input type="text" formControlName="employee_id" class="form-control" id="employee_id" placeholder="Employee ID">
-        <div *ngIf="!fg.controls['employee_id'].valid && fg.controls['employee_id'].touched" class="invalid-feedback d-block">{{
-          requiredError }}</div>
-      </div>
-      <div class="form-group col-sd-12 col-md-6 col-lg-3 col-xl-3 mb-4">
-        <label for="job_title">Job Title</label>
-        <input type="text" formControlName="job_title" class="form-control" id="job_title" placeholder="Job Title">
-      </div>
-      <div class="form-group col-sd-12 col-md-6 col-lg-3 col-xl-3 mb-4">
-        <label for="department">Department</label>
-        <input type="text" formControlName="department" class="form-control" id="dept" placeholder="Department">
-      </div>
     </div>
 
     <div class="row mx-auto my-5 justify-content-center">
-        <div class="form-group col-sd-12 col-md-3 col-lg-3 col-xl-3">
-        <button class="btn btn-primary btn-md btn-block" (click)="save_as_draft(fg.value)" [disabled]="fg.controls['name'].invalid || fg.controls['employee_id'].invalid">Save
-          as Draft</button>
-      </div>
       <div class="form-group col-sd-12 col-md-3 col-lg-3 col-xl-3">
-        <button class="btn btn-primary btn-md btn-block" type="submit" [disabled]="!fg.valid">Review and Submit</button>
+        <button class="btn btn-primary btn-md btn-block" type="submit" [disabled]="!fg.valid">Submit</button>
       </div>
     </div>
   </form>
